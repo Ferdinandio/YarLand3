@@ -1,0 +1,403 @@
+@import "normalize"
+$PSN: 'PT Sans Narrow', sans-serif
+$PSC: 'PT Sans Caption', sans-serif
+p,h1,h2,h3,h4,h5,h6,ul
+    margin: 0
+#kitorder
+    font-family: $PSN
+    background: url('../img/kitorder-bg.jpg') no-repeat center center / cover
+    font-size: 6px
+    .container
+        padding: 0 15px
+        .kitorder--wrapper
+            padding: 5em 0 8em 0
+            display: flex
+            flex-direction: column
+            align-items: center
+            .kitorder__title
+                font-size: 5.4em
+                text-align: center
+                font-weight: bold
+                color: #050505
+                line-height: 1.4em
+            .kitorder__subtitile              
+                font-size: 4em
+                color: #000000
+                line-height: 1.4em
+                border-bottom: 3px solid #f8031a
+                padding: 0 0.2em
+                font-style: normal
+            .kitorder--items
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                max-width: 800px
+                padding: 4em 0
+                .kitorder__item
+                    list-style: none
+                    display: flex
+                    align-items: flex-start
+                    margin-bottom: 10px
+                    .kitorder__img
+                        border-radius: 6px
+                        margin-right: 10px
+                        min-height: 6em
+                        height: 6em
+                        min-width: 6em
+                        width: 6em
+                    .kitorder__text
+                        font-size: $PSC
+                        font-weight: bold
+                        font-size: 3em
+                        line-height: 1.2em
+            .delivery
+                display: flex
+                flex-direction: column
+                align-items: center
+                .delivery__title
+                    font-size: 4em
+                    line-height: 1.4em
+                    span
+                        font-weight: bold
+                .delivery__subtitle
+                    font-size: 3.6em
+                    line-height: 1.4em
+                    span
+                        font-weight: bold
+            #kitorder--form
+                .kitorder--form__btn
+                    background: #fcef46
+                    font-size: 2.4em
+                    text-transform: uppercase   
+                    padding: 0.4em 1em
+                    border: none
+                    transition: box-shadow .4s, transform .4s
+                    margin-top: 30px
+                    cursor: pointer
+                    &:hover
+                        box-shadow: 0 0 10px 1px rgba(0,0,0,0.3)
+                        transform: scale(1.005)        
+#setServices
+    font-family: $PSN
+    background: url('../img/setServices-bg.jpg') no-repeat center center / cover
+    font-size: 6px
+    .container
+        .setServices--wrapper
+            padding: 5em 0 8em 0
+            display: flex
+            flex-direction: column
+            align-items: center
+            .setServices__title
+                font-size: 5.6em
+                color: #fefbfb
+            .setServices--items //ul
+                display: flex
+                flex-direction: column
+                max-width: 732px
+                padding: 0
+                margin: 3em 0 1em 0
+                .setServices__item //li
+                    list-style: none
+                    color: #fcf8f8
+                    display: flex
+                    justify-content: flex-end
+                    margin-bottom: 1em
+                    .setServices__text
+                        font-size: 2.7em
+                        line-height: 1.4em
+                    .setServices__price
+                        font-size: 2.4em
+                        display: flex
+                        min-width: 63px
+                        margin: 0 .8em
+                        line-height: 1.4em
+                    .setServices__input
+                        height: 1.5em
+                        width: 1.5em
+                        border: 4px solid #f1c40f
+                        border-radius: 0.2em
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        text-align: center
+                        font-size: 3em
+                        font-weight: bold
+            #setServices--form
+                display: flex
+                flex-direction: column
+                align-items: center
+                .totalSum
+                    display: flex
+                    margin: 1em 0
+                    .totalSum__title
+                        font-size: 3.6em
+                        color: #fef7f7
+                        margin-right: 0.3em
+                        font-weight: bold
+                    .totalSum__input
+                        height: 1.5em
+                        width: 5em
+                        border: none
+                        background: #f1c40f
+                        border-radius: 0.2em
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        text-align: center
+                        font-size: 3em
+                        font-weight: bold
+                .setServices__btn
+                    font-size: 3em
+                    background: #f1c40f
+                    padding: 0.2em 0.5em
+                    border: none
+                    border-radius: 5px
+                    margin-top: 0.6em
+#secondBlockPopup
+    font-family: $PSN
+    font-size: 6px
+    position: fixed
+    height: 100%
+    max-height: 100%
+    width: 100%
+    max-width: 100%
+    background: rgba(0,0,0,0.3)
+    top: 0
+    left: 0
+    z-index: 99
+    display: none
+    .container
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+        #secondBlockPopup--form
+            display: flex
+            flex-direction: column
+            align-items: center
+            max-width: 500px
+            width: 98%
+            background: #fff
+            padding: 2em
+            box-sizing: border-box
+            .secondBlockPopup__done
+                font-size: 22px
+                color: #00aa4d
+                display: none
+                line-height: 1.6em
+            .secondBlockPopup__fail
+                font-size: 22px
+                color: #ff5858
+                display: none
+                line-height: 1.6em
+            .secondBlockPopup--form__input
+                font-family: $PSC
+                font-size: 22px
+                padding: 5px 10px
+                width: 90%
+                max-width: 400px
+                border: 1px #ccc solid
+                border-radius: 4px
+                background-color: #fff
+                margin: 10px 0
+            .secondBlockPopup--label
+                display: flex
+                align-items: center
+                margin-top: 20px
+                #secondBlockPopup__checkbox
+                    height: 18px
+                    width: 18px
+                    margin-right: 5px
+                .secondBlockPopup__labelTitle
+                    font-size: 18px
+            .secondBlockPopup--form__btn
+                font-size: 28px
+                background: #f1c40f
+                padding: 7px 10px
+                border: none;
+                border-radius: 4px
+                margin-top: 20px
+#alertSuccess
+    padding: 40px 30px
+    position: fixed
+    top: 0
+    left: 50%
+    z-index: 999
+    .alertSuccess            
+        font-family: $PSN
+        font-size: 22px
+        color: #242424
+
+
+@media (max-width: 575.98px)
+    #setServices .container .setServices--wrapper .setServices--items
+        padding: 0 8px
+@media (min-width: 575.98px)
+    #kitorder,
+    #setServices,
+    #secondBlockPopup
+        font-size: 7px
+    .container 
+        max-width: 540px
+        margin: auto
+        padding: 0
+    #setServices .container .setServices--wrapper .setServices--items
+        padding: 0 8px
+@media (min-width: 767.98px)
+    #kitorder,
+    #setServices,
+    #secondBlockPopup
+        font-size: 8px
+    .container
+        max-width: 720px    
+@media (min-width: 991.98px)
+    #kitorder,
+    #setServices,
+    #secondBlockPopup
+        font-size: 9px
+    .container
+        max-width: 960px
+@media (min-width: 1199.98px)
+    #kitorder,
+    #setServices,
+    #secondBlockPopup
+        font-size: 10px
+    .container
+        max-width: 1140px
+
+
+.sec1
+	min-height: 900px
+	.wrapTop
+		margin: 110px 0 0 0
+		min-width: 0
+		padding: 0 15px
+		.text
+			h2
+				font-size: 24px
+				text-align: left
+				letter-spacing: 0.27px
+				line-height: 0.89
+				padding: 0 40px 32px 0 
+			p
+				text-align: left
+				padding: 0 55px 32px 0
+				font-size: 16px
+				line-height: 1.26
+				letter-spacing: 0.48px
+		.slider
+			position: relative
+			padding: 0 53px
+			.slider__item
+				overflow: hidden
+				img
+					height: 100%
+					width: 100%
+			// Слайдер
+			.slick-slider
+			//* Слайдер запущен */
+			.slick-slider.slick-initialized
+			//* Слайдер с точками */
+			.slick-slider.slick-dotted
+
+			//* Ограничивающая оболочка */ 
+			.slick-list
+				overflow: hidden
+			//* Лента слайдов */ 
+			.slick-track
+				display: flex
+
+			//* Слайд */
+			.slick-slide
+			//* Слайд активный (показывается) */ 
+			.slick-slide.slick-active
+			//* Слайд основной */ 
+			.slick-slide.slick-current
+			//* Слайд по центру */ 
+			.slick-slide.slick-center
+			//* Клонированный слайд */ 
+			.slick-slide.slick-cloned
+
+			//* Стрелка */ 
+			.slick-arrow
+				position: absolute
+				top: 50%
+				font-size: 0
+				z-index: 1
+				width: 35px
+				height: 35px
+				outline: none
+				border: 0
+				margin: -35px 0 0 0
+			//* Стрелка влево */
+			.slick-arrow.slick-prev
+				left: 0
+				background: url('../assets/box-9-right.png') 0 0 / 100% no-repeat
+				transform: scale(-1, 1)
+				z-index: 1
+				cursor: pointer
+			//* Стрелка вправо */ 
+			.slick-arrow.slick-next
+				right: 0
+				background: url('../assets/box-9-right.png') 0 0 / 100% no-repeat
+				z-index: 1
+				cursor: pointer
+			//* Стрелка не активная */ 
+			.slick-arrow.slick-disabled
+
+			//* Точки (булиты) */ 
+			.slick-dots
+				display: flex
+				justify-content: center
+				align-items: center
+			.slick-dots li
+				list-style: none
+				width: 13px
+				height: 13px
+				font-size: 0
+				margin: 25px 6px 0 6px
+			//* Активная точка */ 
+			.slick-dots li.slick-active button
+				background: #606060
+			//* Элемент точки */ 
+			.slick-dots li button
+				border-radius: 50%
+				width: 13px
+				height: 13px
+				background: #ffffff
+				border: 1px solid #606060
+				cursor: pointer
+
+
+@media screen and ( max-width: 1200px)
+	.wrapTop
+		margin-right: 25px !important
+		.text
+			margin-bottom: 30px
+			h2
+				text-align: center !important
+				padding: 15px !important
+			p
+				text-align: center !important
+				padding: 15px !important
+
+@media screen and ( max-width: 800px)
+
+	.headCircle
+		opacity: 0
+	.slider
+		padding: 0 !important
+	.slick-arrow
+		display: none !important
+	.slick-dots li
+		list-style: none
+		width: 7px !important
+		height: 7px !important
+		margin: 12px 3px 0 3px !important
+	//* Элемент точки */ 
+	.slick-dots li button
+		width: 7px !important
+		height: 7px !important
+
+// @media screen and ( max-width: 500px )
+	

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../build/css/style.css">
+</head>
+
+<body>
+    <div id="kitorder">
+        <div class="container">
+            <div class="kitorder--wrapper">
+                <h3 class="kitorder__title">Вынесено предписание МЧС или готовитесь к проверке?</h3>
+                <h4 class="kitorder__subtitile">Подготовим Ваш объект к проверке МЧС.</h4>
+                <ul class="kitorder--items">
+                    <li class="kitorder__item">
+                        <img src="/build/img/icon1.jpg" alt="" class="kitorder__img">
+                        <p class="kitorder__text">- планы эвакуации в соответствии с ГОСТ;</p>
+                    </li>
+                    <li class="kitorder__item">
+                        <img src="/build/img/icon2.jpg" alt="" class="kitorder__img">
+                        <p class="kitorder__text">- подбор огнетушителей;</p>
+                    </li>
+                    <li class="kitorder__item">
+                        <img src="/build/img/icon3.jpg" alt="" class="kitorder__img">
+                        <p class="kitorder__text">- знаки пожарной безопасности;</p>
+                    </li>
+                    <li class="kitorder__item">
+                        <img src="/build/img/icon4.jpg" alt="" class="kitorder__img">
+                        <p class="kitorder__text">- удостоверение ПТМ (пожарно-технический минимум);</p>
+                    </li>
+                    <li class="kitorder__item">
+                        <img src="/build/img/icon5.jpg" alt="" class="kitorder__img">
+                        <p class="kitorder__text">- комплект документов по пожарной безопасности (журналы, приказы,
+                            инструкции, графики и т.д.);</p>
+                    </li>
+                    <li class="kitorder__item">
+                        <img src="/build/img/icon6.jpg" alt="" class="kitorder__img">
+                        <p class="kitorder__text">- расчет категорий пожарной безопасности объекта;</p>
+                    </li>
+                    <li class="kitorder__item">
+                        <img src="/build/img/icon7.jpg" alt="" class="kitorder__img">
+                        <p class="kitorder__text">- стенд по пожарной безопасности;</p>
+                    </li>
+                </ul>
+                <div class="delivery">
+                    <p class="delivery__title">Доставка по Москве в пределах МКАД – <span>БЕСПЛАТНО!</span></p>
+                    <p class="delivery__subtitle">Цена комплекта составляет <span>19 900 р.</span></p>
+                </div>
+                <div id="kitorder--form">
+                    <button class="kitorder--form__btn"
+                        onclick="$('#modal_window2').modal('show');return false;">Заказать комплект за <span>19 900
+                            р.</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="setServices">
+        <div class="container">
+            <div class="setServices--wrapper">
+                <h3 class="setServices__title">Выберите свой комплект услуг.</h3>
+                <ul class="setServices--items">
+                    <li class="setServices__item">
+                        <span class="setServices__text">планы эвакуации в соответствии с ГОСТ</span>
+                        <span class="setServices__price"> <span class="setServices__priceVal">1000</span> р.</span>
+                        <input type="number" min="0" class="setServices__input" maxlength="2" value="0">
+                    </li>
+                    <li class="setServices__item">
+                        <span class="setServices__text">подбор огнетушителей</span>
+                        <span class="setServices__price"> <span class="setServices__priceVal">1000</span> р.</span>
+                        <input type="number" min="0" class="setServices__input" maxlength="2" value="0">
+                    </li>
+                    <li class="setServices__item">
+                        <span class="setServices__text">знаки пожарной безопасности</span>
+                        <span class="setServices__price"> <span class="setServices__priceVal">1000</span> р.</span>
+                        <input type="number" min="0" class="setServices__input" maxlength="2" value="0">
+                    </li>
+                    <li class="setServices__item">
+                        <span class="setServices__text">удостоверение ПТМ (пожарно-технический минимум)</span>
+                        <span class="setServices__price"> <span class="setServices__priceVal">1000</span> р.</span>
+                        <input type="number" min="0" class="setServices__input" maxlength="2" value="0">
+                    </li>
+                    <li class="setServices__item">
+                        <span class="setServices__text">комплект документов по пожарной безопасности (журналы, приказы,
+                            инструкции, графики и т.д.)</span>
+                        <span class="setServices__price"> <span class="setServices__priceVal">1000</span> р.</span>
+                        <input type="number" min="0" class="setServices__input" maxlength="2" value="0">
+                    </li>
+                    <li class="setServices__item">
+                        <span class="setServices__text">расчет категорий пожарной безопасности объект</span>
+                        <span class="setServices__price"> <span class="setServices__priceVal">1000</span> р.</span>
+                        <input type="number" min="0" class="setServices__input" maxlength="2" value="0">
+                    </li>
+                    <li class="setServices__item">
+                        <span class="setServices__text">стенд по пожарной безопасности</span>
+                        <span class="setServices__price"> <span class="setServices__priceVal">1000</span> р.</span>
+                        <input type="number" min="0" class="setServices__input" maxlength="2" value="0">
+                    </li>
+                    <li class="setServices__item">
+                        <span class="setServices__text">доставка до Вашего объекта</span>
+                        <span class="setServices__price"> <span class="setServices__priceVal">1000</span> р.</span>
+                        <input type="number" min="0" max="99" maxlength="2" value="0" class="setServices__input">
+                    </li>
+                </ul>
+                <div id="setServices--form">
+                    <p class="totalSum">
+                        <span class="totalSum__title">Общая сумма:</span>
+                        <span class="totalSum__input">0</span>
+                    </p>
+                    <button class="setServices__btn">Заказать услуги</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="secondBlockPopup">
+        <div class="container">
+            <form action="" id="secondBlockPopup--form">
+                <span id="site_span_id167">Введите данные, мы свяжемся с Вами <br>в ближайшее время!</span>
+                <span class="secondBlockPopup__fail"></span>
+                <span class="secondBlockPopup__done"></span>
+                <input name="username" class="secondBlockPopup--form__input" type="text" placeholder="Имя" requare>
+                <input name="phone" class="secondBlockPopup--form__input" type="phone" placeholder="Телефон" requare>
+                <input name="paramsVal" type="hidden" class="setServices__inputParamsVal">
+                <input name="paramsIndex" type="hidden" class="setServices__inputParamsIndexs">
+                <input name="sum" type="hidden" class="setServices__inputSum">
+                <label for="secondBlockPopup__checkbox" class="secondBlockPopup--label">
+                    <input type="checkbox" class="secondBlockPopup__checkbox" id="secondBlockPopup__checkbox">
+                    <span class="secondBlockPopup__labelTitle">Согласие на обработку персональных данных</span>
+                </label>
+                <button type="submit" class="secondBlockPopup--form__btn">Отправить заявку</button>
+            </form>
+        </div>        
+    </section>
+
+    <div id="alertSuccess">
+        <p class="alertSuccess__message">Ваша заявка отправлена!</p>
+    </div>   
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="../build/js/main.js"></script>
+</body>
+
+</html>
