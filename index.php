@@ -13,7 +13,8 @@
    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
    <link href="images/apple-favicon.ico" rel="apple-touch-icon" sizes="41x41">
    <link href="css/min.app.css" rel="stylesheet">
-   <link href="build/css/style.css" rel="stylesheet">
+   <link href="css/furtherStyle.css" rel="stylesheet">
+   <link href="./css/jquery.fancybox.min.css" rel="stylesheet">
 
    <?php echo '<script>var yaParams = {ip_adress: "'. $_SERVER['REMOTE_ADDR'] .'" };</script>'; ?>
 
@@ -358,8 +359,8 @@
                   <div id="price_tariffs">
                      <div class="row">
                         <div class="col-1">
-                           <div id="site_Image7">
-                              <img src="/img/pixel.png" data-src="images/ekonom-1.png" id="Image7" alt="">
+                           <div id="site_Image7" href="images/ekonom-1.png" data-src="images/ekonom-1-xl.png" data-fancybox="gallery">
+                              <img src="/img/pixel.png" data-src="images/ekonom-1-xl.png" id="Image7" alt="">
                            </div>
                            <div id="site_Text24">
                               <span id="site_span_id36"><strong>Эконом</strong></span>
@@ -374,8 +375,8 @@
                               name="Button2" value="ЗАКАЗАТЬ">
                         </div>
                         <div class="col-2">
-                           <div id="site_Image8">
-                              <img src="/img/pixel.png" data-src="images/standrat.png" id="Image8" alt="">
+                           <div id="site_Image8" href="images/standrat.png" data-src="images/standart-xl.png" data-fancybox="gallery">
+                              <img src="/img/pixel.png" data-src="images/standart-xl.png" id="Image8" alt="">
                            </div>
                            <div id="site_Text25">
                               <span id="site_span_id38"><strong>Стандарт</strong></span>
@@ -394,8 +395,8 @@
                               name="Button3" value="ЗАКАЗАТЬ">
                         </div>
                         <div class="col-3">
-                           <div id="site_Image9">
-                              <img src="/img/pixel.png" data-src="images/firmenny.png" id="Image9" alt="">
+                           <div id="site_Image9" href="images/firmenny.png" data-fancybox="gallery" data-src="images/firmenny-xl.png">
+                              <img src="/img/pixel.png" data-src="images/firmenny-xl.png" id="Image9" alt="">
                            </div>
                            <div id="site_Text26">
                               <span id="site_span_id46"><strong>Премиум</strong></span>
@@ -2307,6 +2308,7 @@
       </div>
       <script src="js/app.min.js"></script>
       <script src="build/js/main.js"></script>
+      <script src="./services_page/jquery/jquery.fancybox.min.js"></script>
       <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback&render=explicit" async="" defer="">
       </script>
    </body>

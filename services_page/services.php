@@ -74,7 +74,9 @@ $smarty->config_dir = 'configs';
 $smarty->cache_dir = 'cache';
 
 
-$smarty->display('../smarty/templates/header.tpl');?>
+$smarty->display('../smarty/templates/header.tpl');
+
+?>
 
 
 <section class="sec1 container">
@@ -111,26 +113,26 @@ $smarty->display('../smarty/templates/header.tpl');?>
     <div class="wrapBottom__price col-md-2 col-xl-2">1400 руб.</div>
     <div id="callModal" class="wrapBottom__order col-md-3 col-xl-3 row"><div class="col-2"></div><button class="col-8">Заказать</button><div class="col-2"></div>
   </div>
-  <div class="modalWrapper">
-    <form action="mail-services.php" id="form" class="form" method="POST">
-      <div class="form__title">Заказать печать фотолюминесцентных планов эвакуации</div>
-      <input name="user_name" class="form__name" placeholder="Введите ваше имя" required>
-      <input name="phone" id="phone" class="form__phone" placeholder="Введите ваш телефон" required>
-      <input name="countPlans" type="number" min="1" class="form__countPlan" placeholder="Кол-во планов" required>
-      <select name="sizePlans" class="form__sizePlan" required>
-        <option value disabled selected>Формат планов</option>
-        <option value="400x300">400x300</option>
-        <option value="600x400">600x400</option>
-        <option value="800x600">800x600</option>
-      </select>
-      <div class="form__check">
-        <input type="checkbox" value="0" id="form__check" required>
-        <label for="form__check">Согласие на обработку персональных данных</label>
-      </div>
-      <div class="g-recaptcha" data-sitekey="6LfD8fgUAAAAAP0SeZ9lmL72EBwx7wklnRzx77KW"></div>
-      <button type="submit" name="form__btn" class="form__btn">ЗАКАЗАТЬ ПЛАН</button>
-    </form>
+  <div class="modalBack">
   </div>
+  <form action="mail-services.php" id="form" class="form" method="POST">
+    <div class="form__title">Заказать печать фотолюминесцентных планов эвакуации</div>
+    <input name="user_name" class="form__name" placeholder="Введите ваше имя" required>
+    <input name="phone" id="phone" class="form__phone" placeholder="Введите ваш телефон" required>
+    <input name="countPlans" type="number" min="1" class="form__countPlan" placeholder="Кол-во планов" required>
+    <select name="sizePlans" class="form__sizePlan" required>
+      <option value disabled selected>Формат планов</option>
+      <option value="400x300">400x300</option>
+      <option value="600x400">600x400</option>
+      <option value="800x600">800x600</option>
+    </select>
+    <div class="form__check">
+      <input type="checkbox" value="0" id="form__check" required>
+      <label for="form__check">Согласие на обработку персональных данных</label>
+    </div>
+    <div class="g-recaptcha" data-sitekey="6LfD8fgUAAAAAP0SeZ9lmL72EBwx7wklnRzx77KW"></div>
+    <button type="submit" name="form__btn" class="form__btn">ЗАКАЗАТЬ ПЛАН</button>
+  </form>
 </section>
 
 <section class="sec2">

@@ -1,14 +1,20 @@
 let modalBtn = document.querySelector('#callModal');
-let modalWindow = document.querySelector('.modalWrapper');
+let modalWindow = document.querySelector('.modalBack');
+let form = document.querySelector('.form');
 
 $(document).ready(function() {
 
 	modalBtn.addEventListener('click', function() {
 		modalWindow.style.top = '0';
+		// form.style.top = '50% !important';
+		form.classList.add('showForm');
+		// form.classList.remove('form');
 	});
-
+	
 	modalWindow.addEventListener('click', function() {
 		modalWindow.style.top = '-1000px';
+		// form.style.top = '-150%';
+		form.classList.remove('showForm');
 	});
 
 	jQuery(function($) {
@@ -63,12 +69,14 @@ $(document).ready(function() {
 	jQuery('#first').slick({
 		dots: true,
 		initialSlide: 1,
-		waitForAnimate: false
+		waitForAnimate: false,
+		autoplay: 1
 	});
 	
 	jQuery('#second').slick({
 		dots: true,
-		waitForAnimate: false
+		waitForAnimate: false,
+		autoplay: 1
 	});
 
 	jQuery('#third').slick({

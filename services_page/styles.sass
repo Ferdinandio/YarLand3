@@ -9,6 +9,11 @@
 
 $clr2: #000000
 
+body
+	min-width: 320px
+
+input::-ms-clear
+	display: none
 
 #site_ResponsiveMenu1
 	height: 53px
@@ -86,6 +91,7 @@ $clr2: #000000
 			ul
     		padding-inline-start: 0;
 			.slick-dots
+				padding: 0
 				display: flex
 				justify-content: center
 				align-items: center
@@ -110,12 +116,14 @@ $clr2: #000000
 				border: 1px solid #606060
 				cursor: pointer
 				outline: none
+				padding: 0
 	.wrapBottom
 		background: #f0f0f0
 		min-height: 109px
 		display: flex
 		align-items: center
 		margin: 40px 0
+		padding: 12px 0
 		.wrapBottom__title
 			font-family: PT Sans Narrow Bold
 			font-size: 24px
@@ -156,107 +164,120 @@ $clr2: #000000
 				color: #010101
 			button:hover
 				box-shadow: 0 0 1px 1px #0f0f0f
-	.modalWrapper
+	.modalBack
 		position: fixed
 		top: -1000px
 		left: 0
 		width: 100%
 		height: 100%
 		z-index: 99999999999999
+		transition-duration: 200ms
+	.modalBack:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: #060606
+		opacity: 0.7
+	.form
+		position: fixed
+		left: 50%
+		top: -150%
+		transform: translate(-51%, -51%)
+		text-align: center
+		background: #f0f0f0
+		border-radius: 5px
 		display: flex
+		flex-wrap: wrap
 		justify-content: center
 		align-items: center
+		align-content: center
+		margin: 15px 0
+		max-width: 500px
 		transition-duration: 200ms
-		.form
-			background: #f0f0f0
+		z-index: 999999999999999
+		.form__title
+			width: 60%
+			font-family: PT Sans Narrow
+			font-size: 24px
+			line-height: 1
+			letter-spacing: 0.6px
+			text-align: center
+			color: #000000
+			padding: 30px 0 23px 0
+		.form__name
+			width: 80%
+			height: 50px
 			border-radius: 5px
-			display: flex
-			flex-wrap: wrap
-			justify-content: center
-			align-items: center
-			align-content: center
-			margin: 15px 0
-			max-width: 500px
-			z-index: 999999999999999
-			.form__title
-				width: 60%
-				font-family: PT Sans Narrow
-				font-size: 24px
-				line-height: 1
-				letter-spacing: 0.6px
-				text-align: center
-				color: #000000
-				padding: 30px 0 23px 0
-			.form__name
-				width: 80%
-				height: 50px
-				border-radius: 5px
-				border: solid 1px #cccccc
-				background: #f0f0f0
-				font-family: PT Sans Narrow
-				font-size: 18px
-				line-height: 1.33
-				letter-spacing: 0.45px
-				padding: 0 10px 0 10px
-				margin: 0 0 23px 0
-				outline: none
-			.form__phone
-				width: 80%
-				height: 50px
-				border-radius: 5px
-				border: solid 1px #cccccc
-				background: #f0f0f0
-				font-family: PT Sans Narrow
-				font-size: 18px
-				line-height: 1.33
-				letter-spacing: 0.45px
-				padding: 0 10px 0 10px
-				margin: 0 0 23px 0
-				outline: none
-			.form__countPlan
-				width: 36%
-				height: 50px
-				border-radius: 5px
-				border: solid 1px #cccccc
-				background: #f0f0f0
-				font-family: PT Sans Narrow
-				font-size: 18px
-				line-height: 1.33
-				padding: 0 10px 0 10px
-				margin: 0 2% 23px 0
-				outline: none
-			.form__sizePlan
-				width: 42%
-				height: 50px
-				border-radius: 5px
-				border: solid 1px #cccccc
-				background: #f0f0f0
-				color: #777
-				font-family: PT Sans Narrow
-				font-size: 18px
-				line-height: 1.33
-				letter-spacing: 0.45px
-				padding: 0 10px 0 10px
-				margin: 0 0 23px 0
-				outline: none
-				option
-					font-family: PT Sans Narrow Bold
-			.form__btn
-				margin: 20px 0 30px 0
-				width: 80%
-				height: 50px
-				border-radius: 5px
-				background: #ffde00
-				outline: none
-				border: 0
+			border: solid 1px #cccccc
+			background: #f0f0f0
+			font-family: PT Sans Narrow
+			font-size: 18px
+			line-height: 1.33
+			letter-spacing: 0.45px
+			padding: 0 10px 0 10px
+			margin: 0 0 23px 0
+			outline: none
+		.form__phone
+			width: 80%
+			height: 50px
+			border-radius: 5px
+			border: solid 1px #cccccc
+			background: #f0f0f0
+			font-family: PT Sans Narrow
+			font-size: 18px
+			line-height: 1.33
+			letter-spacing: 0.45px
+			padding: 0 10px 0 10px
+			margin: 0 0 23px 0
+			outline: none
+		.form__countPlan
+			width: 36%
+			height: 50px
+			border-radius: 5px
+			border: solid 1px #cccccc
+			background: #f0f0f0
+			font-family: PT Sans Narrow
+			font-size: 18px
+			line-height: 1.33
+			padding: 0 10px 0 10px
+			margin: 0 2% 23px 0
+			outline: none
+		.form__countPlan
+		.form__sizePlan
+			width: 42%
+			height: 50px
+			border-radius: 5px
+			border: solid 1px #cccccc
+			background: #f0f0f0
+			color: #777
+			font-family: PT Sans Narrow
+			font-size: 18px
+			line-height: 1.33
+			letter-spacing: 0.45px
+			padding: 0 10px 0 10px
+			margin: 0 0 23px 0
+			outline: none
+			option
 				font-family: PT Sans Narrow Bold
-				font-size: 18px
-				line-height: 1.33
-				letter-spacing: 0.9px
-				color: #010101
-			.form__btn:hover
-				box-shadow:  0 0 1px 1px #0f0f0f
-			.form__check
+		.form__btn
+			margin: 20px 0 30px 0
+			width: 80%
+			height: 50px
+			border-radius: 5px
+			background: #ffde00
+			outline: none
+			border: 0
+			font-family: PT Sans Narrow Bold
+			font-size: 18px
+			line-height: 1.33
+			letter-spacing: 0.9px
+			color: #010101
+		.form__btn:hover
+			box-shadow:  0 0 1px 1px #0f0f0f
+		.form__check
 				width: 80%
 				display: flex
 				align-items: center
@@ -266,17 +287,11 @@ $clr2: #000000
 					letter-spacing: 0.6px
 					color: #777
 					padding: 0 0 0 10px
-	.modalWrapper:before
-		content: ""
-		position: absolute
-		top: 0
-		left: 0
-		width: 100%
-		height: 100%
-		background: #060606
-		opacity: 0.7
 	.modalAppear
 		top: 0
+
+.showForm
+	top: 50% !important
 
 .sec2
 	margin: 40px 0
@@ -288,7 +303,7 @@ $clr2: #000000
 	background-repeat: no-repeat
 	display: flex
 	justify-content: center
-	align-items: center
+	align-content: center
 	.itemsWrapSec2
 		width: 90%
 		min-height: 310px
@@ -421,6 +436,7 @@ $clr2: #000000
 				ul
 					padding-inline-start: 0
 				.slick-dots
+					padding: 0
 					display: flex
 					justify-content: center
 					align-items: center
@@ -430,6 +446,7 @@ $clr2: #000000
 					height: 13px
 					font-size: 0
 					margin: 25px 6px 0 6px
+					padding: 0
 				// Активная точка
 			.slick-dots li.slick-active button
 				background: #606060
@@ -445,6 +462,7 @@ $clr2: #000000
 				border: 1px solid #606060
 				cursor: pointer
 				outline: none
+				padding: 0
 		.wrapForm
 			background: #fff
 			.form2
@@ -562,8 +580,9 @@ $clr2: #000000
 			color: #000000
 	.slider#third
 		position: relative
-		padding: 0 53px
+		padding: 53px
 		display: flex
+		margin-top: 20px
 		.slider__item
 			width: 252px
 			height: 189px
@@ -591,14 +610,15 @@ $clr2: #000000
 			p
 				position: relative
 				width: 90%
-				height: fit-content
+				// height: fit-content
+				height: 40px
 				font-family: PT Sans Narrow
 				font-size: 19px
 				line-height: 1.79
 				letter-spacing: 0.48px
 				text-align: left
 				color: #ffffff
-				margin: 0
+				margin: 151px 0 0 0
 		// Ограничивающая оболочка 
 		.slick-list
 			overflow: hidden
@@ -608,7 +628,7 @@ $clr2: #000000
 		// Стрелка
 		.slick-arrow
 			position: absolute
-			top: 50%
+			bottom: 40%
 			font-size: 0
 			z-index: 1
 			width: 35px
@@ -674,7 +694,12 @@ $clr2: #000000
 		padding: 0 !important
 	.outText
 		padding-top: 0 !important
+		margin-bottom: 5px !important
+	// .slider#third
 		
-@media screen and ( max-width: 329px )
-	.disappeared
-		display: none
+@media screen and ( max-width: 347px )
+	.slider#third
+		transform: translate(20px, 0)
+// @media screen and ( max-width: 329px )
+// 	.disappeared
+// 		display: none
